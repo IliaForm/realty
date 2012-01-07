@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Price:</b>
+  <%= @flat.price %>
+</p>
+
+<p>
+  <b>Square:</b>
+  <%= @flat.square %>
+</p>
+
+<p>
+  <b>Room:</b>
+  <%= @flat.rooms %>
+</p>
+
+
+<%= link_to 'Edit', edit_flat_path(@flat) %> |
+<%= link_to 'Back', flats_path %>
