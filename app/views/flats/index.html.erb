@@ -1,5 +1,19 @@
 <h1>Listing flats</h1>
 
+<%= form_for @search, :url => flats_path, :html => {:method => :get} do |f| %>
+  <%= f.label :price_gre, "Price ranges from" %>
+  <%= f.text_field :price_gte, :size => 8 %>
+  <%= f.label :price_lte, "to" %>
+  <%= f.text_field :price_lte, :size => 8 %><br />
+  <%= f.submit "Поиск" %>
+<% end %>
+
+<p>
+ Отсортировать: 
+ <%= sort_link @search, :price %> |
+ <%= sort_link @search, :rooms %>
+<p>
+
 <table>
   <tr>
     <th>Price</th>
@@ -14,7 +28,7 @@
   <tr>
     <td><%= flat.price %></td>
     <td><%= flat.square %></td>
-    <td><%= flat.room %></td>
+    <td><%= flat.rooms %></td>
     <td><%= link_to 'Show', flat %></td>
     <td><%= link_to 'Edit', edit_flat_path(flat) %></td>
     <td><%= link_to 'Destroy', flat, confirm: 'Are you sure?', method: :delete %></td>
