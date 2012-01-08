@@ -1,0 +1,12 @@
+ru:
+  search: "Поиск"
+  price:
+    from: "Цена от"
+    to: "до"
+  rooms:
+    from: "Комнат от"
+    to: "до"
+  sort:
+    price: "Цена"
+    rooms: "Комнаты"
+    sort: "Отсортировать по:"

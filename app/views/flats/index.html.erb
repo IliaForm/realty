@@ -1,17 +1,26 @@
 <h1>Listing flats</h1>
 
 <%= form_for @search, :url => flats_path, :html => {:method => :get} do |f| %>
-  <%= f.label :price_gre, "Price ranges from" %>
+  <%= f.label :price_gre, t('price.from') %>
   <%= f.text_field :price_gte, :size => 8 %>
-  <%= f.label :price_lte, "to" %>
-  <%= f.text_field :price_lte, :size => 8 %><br />
-  <%= f.submit "Поиск" %>
+  <%= f.label :price_lte, t('price.to') %>
+  <%= f.text_field :price_lte, :size => 8 %> 
+  <select>
+    <option>млн. руб.</option>
+    <option>тыс. долл.</option>
+    <option>тыс. евро</option>
+  </select><br />
+  <%= f.label :rooms_gte, t('rooms.from') %>
+  <%= f.text_field :rooms_gte, :size => 2 %>
+  <%= f.label :rooms_lte, t('rooms.to') %>
+  <%= f.text_field :rooms_lte, :size => 2 %><br />
+  <%= f.submit t('search') %>
 <% end %>
 
 <p>
- Отсортировать: 
- <%= sort_link @search, :price %> |
- <%= sort_link @search, :rooms %>
+ <%= t('sort.sort') %> 
+ <%= sort_link @search, :price, t('sort.price') %> |
+ <%= sort_link @search, :rooms, t('sort.rooms') %>
 <p>
 
 <table>

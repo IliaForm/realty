@@ -2,4 +2,14 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  search: Search
+  price:
+    from: Price from
+    to: to
+  rooms:
+    from: rooms from
+    to: to
+  sort:
+    price: Price
+    rooms: Rooms
+    sort: Sort:
