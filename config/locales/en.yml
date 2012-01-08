@@ -2,7 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  search: Search
+  flats: Listing flats
+  search:
+    search: Search
+    extended: Extended search
+    or: or
+    cancel: Cancel
   price:
     from: Price from
     to: to

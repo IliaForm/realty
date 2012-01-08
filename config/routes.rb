@@ -1,5 +1,9 @@
 Realty::Application.routes.draw do
-  resources :flats
+  resources :flats do
+    collection do
+      post :extended_search
+    end
+  end
   root :to => "flats#index"
 
   # The priority is based upon order of creation:

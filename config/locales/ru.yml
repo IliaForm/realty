@@ -1,5 +1,10 @@
 ru:
-  search: "Поиск"
+  flats: "Квартиры"
+  search:
+    search: "Поиск"
+    extended: "Расширенный поиск"
+    or: "или"
+    cancel: "Отменить"
   price:
     from: "Цена от"
     to: "до"
