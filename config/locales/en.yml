@@ -7,7 +7,8 @@ en:
     search: Search
     extended: Extended search
     or: or
-    cancel: Cancel
+    cancel: cancel
+    perair: with major repair
   price:
     from: Price from
     to: to

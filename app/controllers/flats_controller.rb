@@ -81,4 +81,9 @@ class FlatsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def extended_search
+  	@search = Flat.search(params[:search])
+    @flats = @search.all
+  end
 end

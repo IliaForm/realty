@@ -18,7 +18,7 @@
   <%= f.submit t('search.search') %>
 <% end %>
  <%= link_to t('search.extended'),'#', :onclick => "$('#extended_search_form').slideDown()"%>
- <%= render 'extended_search' %>
+ <%= render 'extended_search'%>
 <p>
  <%= t('sort.sort') %> :
  <%= sort_link @search, :price, t('sort.price') %> |

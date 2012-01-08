@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120107063900) do
+ActiveRecord::Schema.define(:version => 20120108203147) do
 
   create_table "flats", :force => true do |t|
     t.float    "price"
@@ -19,6 +19,11 @@ ActiveRecord::Schema.define(:version => 20120107063900) do
     t.integer  "rooms"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "repair"
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
   end
 
 end

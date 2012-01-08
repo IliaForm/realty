@@ -1,8 +1,8 @@
 <%= form_tag(extended_search_flats_path, :id => 'extended_search_form', :style => 'display:none') do %>
   <div class="field">
     <%= check_box 'with foto', true %><br />
-    <%= check_box_tag 'with foto'%>
-    <%= check_box_tag :repair, 'accepted', false %> с ремонтом
+
+    <%= check_box_tag :repair, 'accepted', false %> <%= t('search.repair') %>
   </div>
     <%= submit_tag t ('search.search') %> <%= t('search.or')%>
     <%= link_to t('search.cancel'), '#', :onclick => "$('#extended_search_form').slideUp()" %>

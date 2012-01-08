@@ -4,7 +4,8 @@ ru:
     search: "Поиск"
     extended: "Расширенный поиск"
     or: "или"
-    cancel: "Отменить"
+    cancel: "отменить"
+    repair: "с евроремонтом"
   price:
     from: "Цена от"
     to: "до"
