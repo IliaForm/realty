@@ -12,4 +12,10 @@ en:
   sort:
     price: Price
     rooms: Rooms
-    sort: Sort:
+    sort: Sort
+  square: Square
+  show: Show
+  edit: Edit
+  destroy: Delete
+  delete:
+    sure: Are you sure?

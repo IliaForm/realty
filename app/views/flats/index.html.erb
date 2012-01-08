@@ -18,16 +18,16 @@
 <% end %>
 
 <p>
- <%= t('sort.sort') %> 
+ <%= t('sort.sort') %> :
  <%= sort_link @search, :price, t('sort.price') %> |
  <%= sort_link @search, :rooms, t('sort.rooms') %>
 <p>
 
 <table>
   <tr>
-    <th>Price</th>
-    <th>Square</th>
-    <th>Rooms</th>
+    <th><%= t('sort.price')%></th>
+    <th><%= t('square')%></th>
+    <th><%= t('sort.rooms')%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -38,9 +38,9 @@
     <td><%= flat.price %></td>
     <td><%= flat.square %></td>
     <td><%= flat.rooms %></td>
-    <td><%= link_to 'Show', flat %></td>
-    <td><%= link_to 'Edit', edit_flat_path(flat) %></td>
-    <td><%= link_to 'Destroy', flat, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to t('show'), flat %></td>
+    <td><%= link_to t('edit'), edit_flat_path(flat) %></td>
+    <td><%= link_to t('destroy'), flat, confirm: t('delete.sure'), method: :delete %></td>
   </tr>
 <% end %>
 </table>
