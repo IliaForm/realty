@@ -11,6 +11,9 @@ class FlatsController < ApplicationController
     end
   end
 
+  def main
+  end
+
   # GET /flats/1
   # GET /flats/1.json
   def show
@@ -83,7 +86,9 @@ class FlatsController < ApplicationController
   end
 
   def extended_search
-  	@search = Flat.search(params[:search])
+    @search = Flat.search(params[:search])
     @flats = @search.all
+
+    render 'index'
   end
 end

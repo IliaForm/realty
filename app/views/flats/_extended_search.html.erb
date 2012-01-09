@@ -1,10 +1,9 @@
-<%= form_tag(extended_search_flats_path, :id => 'extended_search_form', :style => 'display:none') do %>
+<%= form_for @search, :url => flats_path, :html => {:method => :get}, :id => 'extended_search_form', :style => 'display:none' do |f| %>
   <div class="field">
-    <%= check_box 'with foto', true %><br />
-
-    <%= check_box_tag :repair, 'accepted', false %> <%= t('search.repair') %>
+    <%= f.check_box :foto_file_name_is_present %><%= f.label t('search.foto') %><br />
+    <%= f.check_box :repair_is_true %> <%=f.label t('search.repair') %>
   </div>
-    <%= submit_tag t ('search.search') %> <%= t('search.or')%>
+    <%= f.submit t('search.search') %> <%= t('search.or')%>
     <%= link_to t('search.cancel'), '#', :onclick => "$('#extended_search_form').slideUp()" %>
   </div>
 <% end %>

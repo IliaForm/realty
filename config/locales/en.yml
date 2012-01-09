@@ -2,6 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  main: Search of realty
   flats: Listing flats
   search:
     search: Search
@@ -9,6 +10,7 @@ en:
     or: or
     cancel: cancel
     perair: with major repair
+    foto: only with foto
   price:
     from: Price from
     to: to
