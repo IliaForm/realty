@@ -4,7 +4,7 @@ Realty::Application.routes.draw do
       post :extended_search
     end
   end
-  root :to => "flats#index"
+  root :to => "flats#main"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
