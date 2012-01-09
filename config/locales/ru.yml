@@ -1,4 +1,17 @@
 ru:
+  activerecord:
+    errors:
+      models:
+        flat:
+          attributes:
+            price:
+              blank: "не может быть пустым"
+              not_a_number: "должна быть числом"
+            square:
+              blank: "не может быть пустым"
+              not_a_number: "должна быть числом"
+            rooms:
+              blank: "не может быть пустым"
   main: "Поиск недвижимости"
   flats: "Квартиры"
   search:
