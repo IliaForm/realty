@@ -7,3 +7,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+  <script type="text/javascript" src="/assets/javascripts/jquery.js"></script>
+   <script type="text/javascript" src="/assets/javascripts/jquery.pikachoose.js"></script>
+   <script type="text/javascript" src="/assets/javascripts/fancybox/jquery.fancybox-1.3.3.pack.js"></script> 
+   <link rel="stylesheet" type="text/css" href="/assets/js/fancybox/jquery.fancybox-1.3.3.css" media="screen" />
+$(document).ready(function (){
+   $("#pikame").PikaChoose();
+});
+
