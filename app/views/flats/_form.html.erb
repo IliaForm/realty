@@ -1,4 +1,4 @@
-<%= form_for(@flat) do |f| %>
+<%= form_for @flat, :html => { :multipart => true } do |f| %>
   <% if @flat.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@flat.errors.count, "error") %> prohibited this flat from being saved:</h2>
