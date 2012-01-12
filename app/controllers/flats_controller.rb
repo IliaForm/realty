@@ -3,7 +3,7 @@ class FlatsController < ApplicationController
   # GET /flats.json
   def index
     @search = Flat.search(params[:search])
-    @flats = @search.all
+    @flats = @search
 
     respond_to do |format|
       format.html # index.html.erb

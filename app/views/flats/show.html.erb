@@ -15,8 +15,10 @@
   <%= @flat.rooms %>
 </p>
 <ul id="pikame">
-  <%= image_tag @flat.foto.url%>
-  <%= image_tag @flat.foto.url(:thumb) %>
+  <% if !@flat.assets.empty? %>
+    <%= image_tag @flat.assets.foto.url%>
+    <%= image_tag @flat.assets.foto.url(:thumb) %>
+  <% end %>
 </ul>
 
 
