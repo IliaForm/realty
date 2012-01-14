@@ -1,6 +1,6 @@
 <%= form_for @search, :url => flats_path, :html => {:method => :get, :id => 'extended_search_form', :id => 'extended_search_form', :style => 'display:none'} do |f| %>
   <div class="field">
-    <%= f.check_box :assets_foto_file_name_is_present %> <%= f.label t('search.foto') %><br />
+    <%= f.check_box :foto_file_name_is_present %> <%= f.label t('search.foto') %><br />
     <%= f.check_box :repair_is_true %> <%=f.label t('search.repair') %>
   </div>
     <%= f.submit t('search.search') %> <%= t('search.or')%>
