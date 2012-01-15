@@ -46,6 +46,8 @@ class FlatsController < ApplicationController
   def create
     @flat = Flat.new(params[:flat])
 
+    process_file_uploads(@flat)
+
     respond_to do |format|
       if @flat.save
         format.html { redirect_to @flat, notice: 'Flat was successfully created.' }
@@ -90,5 +92,15 @@ class FlatsController < ApplicationController
     @flats = @search.all
 
     render 'index'
+  end
+
+  protected
+
+  def process_file_uploads(flat)
+      i = 0
+      while params[:attachment]['file_'+i.to_s] != "" && !params[:attachment]['file_'+i.to_s].nil?
+          flat.assets.build(:data => params[:attachment]['file_'+i.to_s])
+          i += 1
+      end
   end
 end

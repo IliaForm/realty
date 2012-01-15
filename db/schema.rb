@@ -11,19 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120111095055) do
+ActiveRecord::Schema.define(:version => 20120115090454) do
+
+  create_table "assets", :force => true do |t|
+    t.string   "data_file_name"
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "attachable_id"
+    t.string   "attachable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "assets", ["attachable_id", "attachable_type"], :name => "index_assets_on_attachable_id_and_attachable_type"
 
   create_table "flats", :force => true do |t|
     t.float    "price"
     t.float    "square"
     t.integer  "rooms"
+    t.boolean  "repair"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "foto_file_name"
-    t.string   "foto_content_type"
-    t.integer  "foto_file_size"
-    t.datetime "foto_updated_at"
-    t.boolean  "repair"
   end
 
 end

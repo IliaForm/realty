@@ -14,10 +14,7 @@
   <b>Room:</b>
   <%= @flat.rooms %>
 </p>
-<ul id="pikame">
-  <%= image_tag @flat.foto.url%>
-  <%= image_tag @flat.foto.url(:thumb) %>
-</ul>
+<p><b>Attached Files:</b><div id="attachment_list"><%= render :partial => "attachment", :collection => @flat.assets %></div></p>
 
 
 <%= link_to 'Edit', edit_flat_path(@flat) %> |

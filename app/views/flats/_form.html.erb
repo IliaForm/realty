@@ -23,7 +23,15 @@
     <%= f.label :rooms %><br />
     <%= f.number_field :rooms %>
   </div>
-  <%= f.file_field :foto %>
+  <p>Pending Attachments: (Max of <%= Flat::Max_Attachments %> each under <%= Flat::Max_Attachment_Size/1.megabyte%>MB)
+      <% if @flat.assets.count >= Flat::Max_Attachments %>
+        <input id="newfile_data" type="file" disabled />
+      <% else %>
+        <input id="newfile_data" type="file" />
+      <% end %>
+      <div id="attachment_list"><ul id="pending_files"></ul></div>
+      
+  </p>
   <div class="actions">
     <%= f.submit %>
   </div>

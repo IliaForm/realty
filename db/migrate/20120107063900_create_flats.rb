@@ -4,6 +4,7 @@ class CreateFlats < ActiveRecord::Migration
       t.float :price
       t.float :square
       t.integer :rooms
+      t.boolean :repair
 
       t.timestamps
     end

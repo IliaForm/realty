@@ -13,6 +13,8 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem 'jquery-rails'
 
+#gem "attachment_fu", :git => "https://github.com/technoweenie/attachment_fu.git"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

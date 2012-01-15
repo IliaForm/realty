@@ -1,4 +1,7 @@
 Realty::Application.routes.draw do
+  get "assets_controller/show"
+
+  resources :assets
   resources :flats do
     collection do
       post :extended_search
